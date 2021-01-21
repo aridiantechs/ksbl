@@ -50,7 +50,6 @@ RewriteRule ^emba-admission-portal/(.*)$ /mba/admissions/$1 [R=301,NC,L]
 RewriteRule ^executive-education-services/open-enrollment-programs/(.*) /executive-education-services/ [R=301,NC,L]
 RewriteRule ^executive-education-services/program-calendar/(.*) /executive-education-services/ [R=301,NC,L]
 RewriteRule ^executive-education-services/application-process/(.*) /executive-education-services/ [R=301,NC,L]
-RewriteRule ^executive-education-services/customized-programs/(.*) /executive-education-services/ [R=301,NC,L]
 RewriteRule ^executive-education-services/executive-education-alumni/(.*) /executive-education-services/ [R=301,NC,L]
 RewriteRule ^executive-education-services/seminar-series/(.*) /executive-education-services/ [R=301,NC,L]
 
@@ -426,13 +425,13 @@ Redirect /wp-content/themes/ksbl-v1.0/pdf/programme-calendar.pdf /about
 
 
 
-#example.com/page will display the contents of example.com/page.html
+#ksbl.com/page will display the contents of ksbl.com/page.html
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.+)$ $1.html [L,QSA]
 
-#301 from example.com/page.html to example.com/page
+#301 from ksbl.com/page.html to ksbl.com/page
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*\.html\ HTTP/
 RewriteRule ^(.*)\.html$ /$1 [R=301,L]
 </IfModule>
